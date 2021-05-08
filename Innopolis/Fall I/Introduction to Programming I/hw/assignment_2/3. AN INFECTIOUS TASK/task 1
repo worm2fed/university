@@ -1,0 +1,27 @@
+We have graph structure:
+
+Adam	->	Joe	-> 	Sarah	->	
+Cara	->	Mary	->	Bill	->	
+Tim	->	Sarah	-> 	[and so on]
+
+So, if we start infection from Bill, we shall never infect all persons, 
+course there are no references from Bill to Adam or Joe.
+
+Version 1 - No!
+In this version we are infect coworkers in such way:
+Bill	->	Tim	->	Sarah	-> 	
+Cara	-> 	Mary
+Bill follows again after Mary, so the feature are going to join infinite loop.
+
+Version 2 - No!
+In this version we can see recursion. But this feature are not going to do what we suppose.
+When we reach Mary we can see that Bill still health (we infect person after feature call).
+So we are going to join infinite loop again.
+
+Version 3 - Yes!
+We have the same situation like in Version 1, but there is one important distinction - 
+if coworker has flue we'll stop infectioning.
+
+Version 4 - Yes!
+We have the same situation like in Version 2, but there we infect coworker and 
+only then we join recursion.

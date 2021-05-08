@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eiffel Web Form - Admin</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-lg-6 center-block" style="float: none;">
+                <div class="ibox-content">
+                    <h2>Admin page</h2>
+                    <p>Choose the request to the University Unit BD</p>
+
+                    <form id="form" action="/api/request" class="wizard-big wizard clearfix" role="application" novalidate="novalidate">
+                        <h2>General Information</h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <select class="form-control m-b" name="id" id="select" onchange="appendAdditionFields()">
+                                        <option selected disabled value="1">Select report type</option>
+                                        <option value="1">All publications of the University in the 2017th year</option>
+                                        <option value="2">Cumulative info of a given unit over several years</option>
+                                        <option value="3">Courses taught by a Laboratory between initial and final date</option>
+                                        <option value="4">Number of supervised students by Laboratories in the 2017th year</option>
+                                        <option value="5">Number of research collaborations, if any, by Laboratory</option>
+                                        <option value="6">Students in the selected Laboratory during selected year</option>
+                                        <option value="7">Laboratories that worked with selected Industries</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group" id="additional">
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit">
+                                        <strong>Submit request</strong>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/custom.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- Date range use moment.js same as full calendar plugin -->
+<script src="js/plugins/fullcalendar/moment.min.js"></script>
+<!-- Date range picker -->
+<script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+
+<script>
+function appendAdditionFields() {
+    $('#additional').empty();
+    switch($('#select').val()) {
+        case '2':
+            $('#additional').append('<input type="text" name="unit" class="form-control" placeholder="Enter Unit">');
+
+            break;
+        case '3':
+            $('#additional').append('<div class="input-daterange input-group" id="datepicker" style="width: 100%">\n<input type="text" class="input-sm form-control" name="start">\n<span class="input-group-addon">to</span>\n<input type="text" class="input-sm form-control" name="end">\n</div>');
+
+            $('#additional .input-daterange').datepicker({
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+
+            break;
+        case '5':
+            $('#additional').append('<input type="text" name="lab" class="form-control" placeholder="Enter Lab">');
+
+            break;
+        case '6':
+            $('#additional').append('<input type="text" name="lab" class="form-control" placeholder="Enter Lab"><br>');
+
+            $('#additional').append('<div class="input-group date">\n<span class="input-group-addon">\n<i class="fa fa-calendar"></i>\n</span>\n<input type="text" class="form-control" placeholder="Select year" name="year">\n</div>');
+
+            $('#additional .input-group.date').datepicker({
+                format: 'yyyy',
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true,
+                todayHighlight: true,
+                viewMode: "years", 
+                minViewMode: "years"
+            });
+
+            break;
+        case '7':
+            $('#additional').append('<input type="text" name="industry" class="form-control" placeholder="Enter Industry">');
+
+            break;
+    }
+}
+</script>
+
+</body>
+</html>

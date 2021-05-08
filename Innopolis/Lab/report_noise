@@ -1,0 +1,8 @@
+I've started a little research to figure out how I can detect promo accounts at VK Network. So, there is a criteria' list: 
+ - profile content
+ - amount of friends
+ - amount of media
+ - wall activity
+
+But there is a lot of complexity and memory problems. For example for 1 billion users we should make about 5 requests per user (5 billion requests at all) - we can use VK API maximum 75 times per second and for 1 billion dataset it takes more then 10k hours. 
+I think I can filter my dataset only after cloning user's database to my local machine. So, I think the first priority task is to crawler all valid user ids and their cities. 

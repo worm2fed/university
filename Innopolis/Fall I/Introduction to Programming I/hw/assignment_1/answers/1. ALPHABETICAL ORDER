@@ -1,0 +1,5 @@
+A word X is alphabetically before a word Y if and only if the character with defined position of word X 
+(integer representation of this character) is less then the same character position of the word Y 
+(starting with the first character). 
+
+Notice: If they are equial we have to check the next character.

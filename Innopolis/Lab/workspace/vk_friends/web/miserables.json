@@ -1,0 +1,12 @@
+{
+	"nodes": [
+		{"name": "name", "group": 1, "photo": "https://pp.userapi.com/c639719/v639719942/cdb3/t2bVEdJpxkY.jpg"}, 
+		{"name": "Tonechka Smirnova", "group": 1, "photo": "https://pp.userapi.com/c637731/v637731892/282b5/WgUmlPur86A.jpg"}, 
+		{"name": "name-name", "group": 1, "photo": "https://pp.userapi.com/c604527/v604527228/34d2a/u8RbnaJIqvI.jpg"}
+	], 
+	"links": [
+		{"source": 10, "target": 6, "value": 1}, 
+		{"source": 4, "target": 7, "value": 1}, 
+		{"source": 5, "target": 7, "value": 1}
+	]
+}

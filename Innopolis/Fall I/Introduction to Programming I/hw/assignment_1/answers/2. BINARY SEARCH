@@ -1,0 +1,6 @@
+All algorithms are wrong!
+
+P1: Infinite cycle.
+P2: Infinite cycle.
+P3: j doesn't change.
+P4: We can't find needed element, because we choose wrong 'banch'

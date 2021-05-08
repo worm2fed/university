@@ -1,0 +1,83 @@
+$date
+	Wed Sep 28 06:51:55 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module priority_test $end
+$var wire 1 ! y2 $end
+$var wire 1 " y1 $end
+$var wire 1 # y0 $end
+$var reg 1 $ a0 $end
+$var reg 1 % a1 $end
+$var reg 1 & a2 $end
+$var reg 1 ' a3 $end
+$var reg 1 ( a4 $end
+$var reg 1 ) a5 $end
+$var reg 1 * a6 $end
+$var reg 1 + a7 $end
+$scope module dut $end
+$var wire 1 $ a0 $end
+$var wire 1 % a1 $end
+$var wire 1 & a2 $end
+$var wire 1 ' a3 $end
+$var wire 1 ( a4 $end
+$var wire 1 ) a5 $end
+$var wire 1 * a6 $end
+$var wire 1 + a7 $end
+$var wire 1 # y0 $end
+$var wire 1 " y1 $end
+$var wire 1 ! y2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x+
+x*
+x)
+x(
+x'
+x&
+x%
+1$
+1#
+1"
+1!
+$end
+#10000
+0!
+1%
+0$
+#20000
+0"
+1!
+1&
+0%
+#30000
+0!
+1'
+0&
+#40000
+1!
+1"
+0#
+1(
+0'
+#50000
+0!
+1)
+0(
+#60000
+1!
+0"
+1*
+0)
+#70000
+0!
+1+
+0*
+#200000

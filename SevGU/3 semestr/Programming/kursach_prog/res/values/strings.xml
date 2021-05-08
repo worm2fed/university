@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Эмулятор ассемблера</string>
+    <string name="assembler_result">Просмотр</string>
+    <string name="title_run">Выполнение</string>
+    <string name="choose_file">Выбрать файл</string>
+    <string name="assembl">Преобразовать в объектный код</string>
+    <string name="run">Выполнить</string>
+    <string name="object_code_com">Файл с объектным кодом и листинг появятся в директории с исходным файлом, с именами, соответственно, object_code.w2f и listing.w2f</string>
+    <string name="show_object_code">Показать объектный код</string>
+    <string name="show_listing">Показать листинг</string>
+    <string name="success_asm">Файл успешно ассемблирован!</string>
+    <string name="success_run">Программа успешно выполнена!</string>
+    <string name="mode">Режим:</string>
+    <string name="delay">Задержка:</string>
+    <string name="reg1">Регистр 1:</string>
+    <string name="reg2">Регистр 2:</string>
+    <string name="reg_flag">Регистр флагов:</string>
+    <string name="mem_left">Данные в памяти:</string>
+    <string name="show_mem_left">Показать оставшиеся данные</string>
+
+    <string-array name="mode_arr">
+        <item>Автоматический</item>
+        <item>Ручной</item>
+    </string-array>
+
+    <!-- ERRORS -->
+    <string name="sdcard_error">SD-карта не доступна!</string>
+    <string name="access_error">Ошибка доступа!</string>
+    <string name="notchosen_error">Файл не выбран!</string>
+    <string name="extention_error">Неподдерживаемое расширение!</string>
+    <string name="listing_error">Ошибка при создании листинга!</string>
+    <string name="object_error">Ошибка при создании объектного кода!</string>
+    <string name="notfound_error">Файл не найден!</string>
+    <string name="reading_error">Ошибка при чтении файла!</string>
+    <string name="closing_error">Ошибка при закрытии файла!</string>
+    <string name="notasm_error">Сначала необходимо получить объектный код!</string>
+    <string name="mode_error">Не удаётся распознать выбранный режим!</string>
+    <string name="prepare_error">Ошибка при подготовке команды!</string>
+    <string name="jo_err">Произошло переполнение!</string>
+    <string name="ex_error">Произошла ошибка неизвестная ошибка при выполнении программы!</string>
+
+</resources>

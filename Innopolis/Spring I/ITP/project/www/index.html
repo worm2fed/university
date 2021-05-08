@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eiffel Web Form</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-lg-6 center-block" style="float: none;">
+                <div class="ibox-content">
+                    <h2>University Unit Report Form</h2>
+                    <p></p>
+
+                    <form id="form" action="/api/save" method="get" class="wizard-big wizard clearfix" role="application" novalidate="novalidate">
+                        <h1 id="form-h-0" tabindex="-1" class="title current">General</h1>
+                        <fieldset id="form-p-0" role="tabpanel" aria-labelledby="form-h-0" class="body current" aria-hidden="false">
+                            <h2>General Information</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Name of University Unit *</label>
+                                        <input id="NameOfUniversityUnit" name="NameOfUniversityUnit" type="text" class="form-control required" aria-required="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Name of head of University Unit *</label>
+                                        <input id="NameOfHeadOfUniversityUnit" name="NameOfHeadOfUniversityUnit" type="text" class="form-control required" aria-required="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-6" style="padding-left: 0px">
+                                            <label>Start of reporting period *</label>
+                                            <input id="StartOfReportingPeriod" name="StartOfReportingPeriod" type="date" class="form-control required" aria-required="true">
+                                        </div>
+                                        <div class="col-md-6" style="padding-right: 0px">
+                                            <label>End of reporting period *</label>
+                                            <input id="EndOfReportingPeriod" name="EndOfReportingPeriod" type="date" class="form-control required" aria-required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1 id="form-h-1" tabindex="-1" class="title">Teaching</h1>
+                        <fieldset id="form-p-1" role="tabpanel" aria-labelledby="form-h-1" class="body" aria-hidden="true" style="display: none;">
+                            <h2>Teaching Information</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Courses taught</label>
+                                        <textarea id="CoursesTaught" name="CoursesTaught" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Examinations</label>
+                                        <textarea id="Examinations" name="Examinations" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Students supervised</label>
+                                        <textarea id="StudentsSupervised" name="StudentsSupervised" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Completed student reports</label>
+                                        <textarea id="CompletedStudentsReports" name="CompletedStudentsReports" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Completed PhD theses</label>
+                                        <textarea id="CompletedPhDTheses" name="CompletedPhDTheses" type="text" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1 id="form-h-2" tabindex="-1" class="title">Research</h1>
+                        <fieldset id="form-p-2" role="tabpanel" aria-labelledby="form-h-2" class="body" aria-hidden="true" style="display: none;">
+                            <h2>Research Information</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Grants</label>
+                                        <textarea id="Grants" name="Grants" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Research projects</label>
+                                        <textarea id="ResearchProjects" name="ResearchProjects" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Research collaborations</label>
+                                        <textarea id="ResearchCollaborations" name="ResearchCollaborations" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Conference publications</label>
+                                        <textarea id="ConferencePublications" name="ConferencePublications" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Journal publications</label>
+                                        <textarea id="JournalPublications" name="JournalPublications" type="text" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1 id="form-h-3" tabindex="-1" class="title">Technology Transfer</h1>
+                        <fieldset id="form-p-3" role="tabpanel" aria-labelledby="form-h-3" class="body" aria-hidden="true" style="display: none;">
+                            <h2>Technology Transfer Information</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Patents</label>
+                                        <textarea id="Patents" name="Patents" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>IP licensing</label>
+                                        <textarea id="IPLicensing" name="IPLicensing" type="text" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1 id="form-h-4" tabindex="-1" class="title current">Distinctions</h1>
+                        <fieldset id="form-p-4" role="tabpanel" aria-labelledby="form-h-4" class="body current" aria-hidden="false">
+                            <h2>Distinctions Information</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Best paper awards</label>
+                                        <textarea id="BestPaperAwards" name="BestPaperAwards" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Memberships</label>
+                                        <textarea id="Membership" name="Membership" type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Prizes</label>
+                                        <textarea id="Prizes" name="Prizes" type="text" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1 id="form-h-5" tabindex="-1" class="title current">Outside Activities</h1>
+                        <fieldset id="form-p-5" role="tabpanel" aria-labelledby="form-h-5" class="body current" aria-hidden="false">
+                            <h2>Outside Activities Information</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Industry Collaborations</label>
+                                        <textarea id="IndustryCollaborations" name="IndustryCollaborations" type="text" class="form-control"></textarea>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1 id="form-h-6" tabindex="-1" class="title current">Other</h1>
+                        <fieldset id="form-p-6" role="tabpanel" aria-labelledby="form-h-6" class="body current" aria-hidden="false">
+                            <h2>Other Information</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Other</label>
+                                        <textarea id="OtherInformation" name="OtherInformation" type="text" class="form-control"></textarea>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/custom.js"></script>
+
+<!-- Steps -->
+<script src="js/plugins/steps/jquery.steps.min.js"></script>
+
+<!-- Jquery Validate -->
+<script src="js/plugins/validate/jquery.validate.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $("#form").steps({
+        bodyTag: "fieldset",
+        onStepChanging: function (event, currentIndex, newIndex) {
+            // Always allow going backward even if the current step contains invalid fields!
+            if (currentIndex > newIndex) {
+                return true;
+            }
+
+            var form = $(this);
+
+            // Clean up if user went backward before
+            if (currentIndex < newIndex) {
+                // To remove error styles
+                $(".body:eq(" + newIndex + ") label.error", form).remove();
+                $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+            }
+
+            // Disable validation on fields that are disabled or hidden.
+            form.validate().settings.ignore = ":disabled,:hidden";
+
+            // Start validation; Prevent going forward if false
+            return form.valid();
+        },
+        onStepChanged: function (event, currentIndex, priorIndex) {
+
+        },
+        onFinishing: function (event, currentIndex) {
+            var form = $(this);
+
+            // Disable validation on fields that are disabled.
+            // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+            form.validate().settings.ignore = ":disabled";
+
+            // Start validation; Prevent form submission if false
+            return form.valid();
+        },
+        onFinished: function (event, currentIndex) {
+            var form = $(this);
+
+            // Submit form input
+            form.submit();
+        }
+    }).validate({
+        errorPlacement: function (error, element) {
+            element.before(error);
+        },
+        rules: {
+            
+        }
+    });
+});
+</script>
+
+</body>
+</html>

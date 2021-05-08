@@ -1,0 +1,29 @@
+;LOAD regN
+;STORE regN
+;ADD
+;SUB
+;AND
+;JO
+;REV
+;DUP
+
+STORE reg0 5; записали х
+STORE reg0 9; записали у
+LOAD reg1;
+LOAD reg2;
+ADD;
+STORE reg1;
+STORE reg0 A;
+LOAD reg1;
+LOAD reg2;
+AND;
+STORE reg1;
+STORE reg0 77;
+REV;
+DUP;
+STORE reg0 7F;
+LOAD reg1;
+LOAD reg2;
+ADD;
+JO;
+STORE reg1;

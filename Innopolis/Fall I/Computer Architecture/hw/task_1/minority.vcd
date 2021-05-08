@@ -1,0 +1,49 @@
+$date
+	Tue Sep 27 23:20:52 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module minority_test $end
+$var wire 1 ! y $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$scope module dut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+0#
+0"
+1!
+$end
+#10000
+1$
+#20000
+0$
+1#
+#30000
+0!
+1$
+#40000
+0$
+0#
+1"
+#50000
+1$
+#60000
+0$
+1#
+#70000
+1$
+#100000

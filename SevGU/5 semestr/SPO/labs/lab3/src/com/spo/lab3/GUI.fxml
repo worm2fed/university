@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="760.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spo.lab3.GUIController">
+   <children>
+      <TextArea fx:id="inputStackArea" layoutX="16.0" layoutY="106.0" prefHeight="600.0" prefWidth="205.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="106.0" />
+      <TextArea fx:id="outputStackArea" layoutX="674.0" layoutY="106.0" prefHeight="600.0" prefWidth="205.0" AnchorPane.bottomAnchor="54.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="106.0" />
+      <TextArea fx:id="M" layoutX="455.0" layoutY="106.0" prefHeight="600.0" prefWidth="205.0" AnchorPane.bottomAnchor="54.0" AnchorPane.topAnchor="106.0" />
+      <TextArea fx:id="inputChar" layoutX="237.0" layoutY="106.0" prefHeight="600.0" prefWidth="205.0" AnchorPane.bottomAnchor="54.0" AnchorPane.topAnchor="106.0" />
+      <Label layoutX="237.0" layoutY="67.0" text="Входной символ:" AnchorPane.topAnchor="67.0" />
+      <Label layoutX="22.0" layoutY="67.0" prefHeight="21.0" prefWidth="97.0" text="Входной стек:" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="67.0" />
+      <Label layoutX="455.0" layoutY="67.0" text="M(&lt;A&gt;,a):" AnchorPane.topAnchor="67.0" />
+      <Label layoutX="674.0" layoutY="67.0" text="Выходной стек:" AnchorPane.topAnchor="67.0" />
+      <Button layoutX="757.0" layoutY="29.0" mnemonicParsing="false" onAction="#start" text="Моделировать" AnchorPane.leftAnchor="757.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="29.0" />
+      <TextField fx:id="inputString" layoutX="16.0" layoutY="29.0" prefHeight="31.0" prefWidth="658.0" promptText="Входная строка разбора" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="29.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+R=C+D
+A=B+C
+C=B*D
+D=B+A
+B=4

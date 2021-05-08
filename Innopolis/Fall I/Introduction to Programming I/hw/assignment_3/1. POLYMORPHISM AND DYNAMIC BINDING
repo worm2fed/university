@@ -1,0 +1,30 @@
+Task 1:
+Doesn't compile, beacause we can't create objects from deferred class
+
+Task 2:
+Doesn't compile, beacause we are trying to specify type of object wich 
+doesn't conform to type of target
+
+Task 3:
+Output: "Thor is now a level 2 warrior"
+
+Task 4:
+Output: "Thor is now a level 2 warrior 
+	Althea is now a level 2 healer"
+	
+Task 5:
+Doesn't compile, beacause we've redefined feature do_action in class Warrior
+
+Task 6:
+Output: "Althea is now a level 2 healer"
+
+Task 7:
+Output: "Thor attacks Thor. Does 5 damage 
+	Althea heals Althea by 0 points"
+	
+Task 8:
+Output: "Thor attacks Thor. Does 5 damage 
+	Althea heals Thor by 5 points"
+	
+Task 9:
+Doesn't compile, beacause we can't assign object of deferred class

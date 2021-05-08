@@ -1,0 +1,3 @@
+The benefit of using the constant attribute Width is the fixed table width (we can align or lines)
+
+In our program can appear error (we minus negative value from Width). We can change constant value for two times (or more)

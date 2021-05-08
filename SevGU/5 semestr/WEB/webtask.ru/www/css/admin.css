@@ -1,0 +1,61 @@
+html {
+	margin-top: -20px;
+}
+
+.login_box {
+	margin: -20px auto;
+	max-width: 700px;
+}
+.login_box input {
+	font-size: 1.5em;
+	height: 2.2em;
+	transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
+	-ms-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+}
+.login_box input:hover, .login_box input:focus, .login_blox input:active {
+	color: #26B99A;
+	border-color: #4cae4c;
+}
+.login_box .login_button_box {
+	text-align: center;
+}
+.login_box .login_button {
+	max-width: 200px;
+	transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
+	-ms-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+}
+.login_box .login_button:hover {
+	border-color: #2A3F54;
+	color: #2A3F54;
+	background: #4cae4c;
+}
+
+#top_menu_manual {
+	top: 7px;
+}
+
+.admin_body {
+	//padding-left: 35px !important;
+	//padding-right: 35px !important;
+}
+
+.error {
+	border: 1px solid red !important;
+	color: red;
+	transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
+	-ms-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+}
+
+#edit_photo {
+	width: 750px;
+	margin: auto;
+}

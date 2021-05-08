@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.worm2fed.kursach_prog.MainActivity" >
+
+    <Button
+        android:id="@+id/open_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onOpenFileClick"
+        android:text="@string/choose_file" />
+
+    <TextView
+        android:id="@+id/file_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/open_file"
+        android:layout_alignBottom="@+id/open_file"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/open_file"
+        android:layout_toStartOf="@+id/open_file" />
+
+    <Button
+        android:id="@+id/assembl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/file_path"
+        android:layout_alignStart="@+id/file_path"
+        android:layout_below="@+id/open_file"
+        android:onClick="onAssemblClick"
+        android:text="@string/assembl" />
+
+    <Button
+        android:id="@+id/run"
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/assembl"
+        android:layout_alignBottom="@+id/assembl"
+        android:layout_alignEnd="@+id/open_file"
+        android:layout_alignLeft="@+id/open_file"
+        android:layout_alignRight="@+id/open_file"
+        android:layout_alignStart="@+id/open_file"
+        android:onClick="onRunClick"
+        android:text="@string/run" />
+
+    <TextView
+        android:id="@+id/object_code_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/assembl"
+        android:layout_alignStart="@+id/assembl"
+        android:layout_centerVertical="true"
+        android:text="@string/object_code_com" />
+
+    <Button
+        android:id="@+id/show_object_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/object_code_com"
+        android:layout_alignStart="@+id/object_code_com"
+        android:layout_below="@+id/object_code_com"
+        android:onClick="onShowObjectCodeClick"
+        android:text="@string/show_object_code" />
+
+    <Button
+        android:id="@+id/show_listing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/object_code_com"
+        android:layout_alignRight="@+id/object_code_com"
+        android:layout_below="@+id/object_code_com"
+        android:onClick="onShowListingClick"
+        android:text="@string/show_listing" />
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+1. Feature name, as in Zurich.name - query
+2. Feature buildings, as in Zurich.buildings - query
+3. Feature add_line, as in Zurich.add_line (2, “tram”) - command
+4. Feature connecting_lines, as in Zurich.connecting_lines (central, polyterrasse) - query
+5. Feature move_all, as in Zurich.move_all (0.5) - command
+6. Feature north, as in Zurich.north - query
