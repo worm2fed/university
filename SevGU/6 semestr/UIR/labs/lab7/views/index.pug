@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  each _, i in rows
+    h3= 'MySQL ' + names[i] + ' at ' + conn[i].host + ':' + conn[i].port
+    table
+      tr
+        th= 'id'
+        th= 'title'
+        th= 'posts_count'
+        th= 'link'
+          for rec in rows[i]
+            tr
+              td= rec.id
+              td= rec.title
+              td= rec.posts_count
+              td
+                a(href='/id/' + rec.id) view

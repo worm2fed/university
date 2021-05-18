@@ -1,0 +1,124 @@
+networks:
+  mir:
+    driver: bridge
+
+services:
+  db1:
+    image: mysql:8.0.23
+    container_name: mir_db1
+    volumes:
+      - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
+      - ./db/first:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3301:3306"
+    networks:
+      mir:
+        aliases:
+          - db1
+
+  db1_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_db1_admin
+    ports:
+      - "8001:80"
+    environment:
+      PMA_HOST: db1
+    links:
+      - db1
+    depends_on:
+      - db1
+    networks:
+      - mir
+
+  db2:
+    image: mysql:8.0.23
+    container_name: mir_db2
+    volumes:
+      - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
+      - ./db/second:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3302:3306"
+    networks:
+      mir:
+        aliases:
+          - db2
+
+  db2_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_db2_admin
+    ports:
+      - "8002:80"
+    environment:
+      PMA_HOST: db2
+    links:
+      - db2
+    depends_on:
+      - db2
+    networks:
+      - mir
+
+  db3:
+    image: mysql:8.0.23
+    container_name: mir_db3
+    volumes:
+      - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
+      - ./db/third:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3303:3306"
+    networks:
+      mir:
+        aliases:
+          - db3
+
+  db3_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_db3_admin
+    ports:
+      - "8003:80"
+    environment:
+      PMA_HOST: db3
+    links:
+      - db3
+    depends_on:
+      - db3
+    networks:
+      - mir
+
+  db4:
+    image: mysql:8.0.23
+    container_name: mir_db4
+    volumes:
+      - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
+      - ./db/fourth:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3304:3306"
+    networks:
+      mir:
+        aliases:
+          - db4
+
+  db4_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_db4_admin
+    ports:
+      - "8004:80"
+    environment:
+      PMA_HOST: db4
+    links:
+      - db4
+    depends_on:
+      - db4
+    networks:
+      - mir

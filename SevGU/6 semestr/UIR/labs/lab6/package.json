@@ -1,0 +1,16 @@
+{
+  "name": "mir-lab6",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start_master": "node server-master.js",
+    "start_slaves": "node server-slaves.js"
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2"
+  }
+}

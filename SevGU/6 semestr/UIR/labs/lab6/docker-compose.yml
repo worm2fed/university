@@ -1,0 +1,149 @@
+networks:
+  mir:
+    driver: bridge
+
+services:
+  master_db:
+    image: mysql:8.0.23
+    container_name: mir_master_db
+    volumes:
+      - "./mysql/init_master.sql:/docker-entrypoint-initdb.d/init_master.sql"
+      - "./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql"
+      - ./db/master:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+      --server-id=1
+      --gtid-mode=ON
+      --enforce-gtid-consistency=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3306:3306"
+    networks:
+      mir:
+        aliases:
+          - master_db
+
+  master_db_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_master_db_admin
+    ports:
+      - "8000:80"
+    environment:
+      PMA_HOST: master_db
+    links:
+      - master_db
+    depends_on:
+      - master_db
+    networks:
+      - mir
+
+  slave_db1:
+    image: mysql:8.0.23
+    container_name: mir_slave_db1
+    volumes:
+      - "./mysql/init_slave.sql:/docker-entrypoint-initdb.d/init_slave.sql"
+      - ./db/slave1:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+      --server-id=2
+      --gtid-mode=ON
+      --enforce-gtid-consistency=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3310:3306"
+    links:
+      - master_db
+    depends_on:
+      - master_db
+    networks:
+      mir:
+        aliases:
+          - slave_db1
+
+  slave_db1_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_slave_db1_admin
+    ports:
+      - "8001:80"
+    environment:
+      PMA_HOST: slave_db1
+    links:
+      - slave_db1
+    depends_on:
+      - slave_db1
+    networks:
+      - mir
+
+  slave_db2:
+    image: mysql:8.0.23
+    container_name: mir_slave_db2
+    volumes:
+      - "./mysql/init_slave.sql:/docker-entrypoint-initdb.d/init_slave.sql"
+      - ./db/slave2:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+      --server-id=3
+      --gtid-mode=ON
+      --enforce-gtid-consistency=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3311:3306"
+    links:
+      - master_db
+    depends_on:
+      - master_db
+    networks:
+      mir:
+        aliases:
+          - slave_db2
+
+  slave_db2_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_slave_db2_admin
+    ports:
+      - "8002:80"
+    environment:
+      PMA_HOST: slave_db2
+    links:
+      - slave_db2
+    depends_on:
+      - slave_db2
+    networks:
+      - mir
+
+  slave_db3:
+    image: mysql:8.0.23
+    container_name: mir_slave_db3
+    volumes:
+      - "./mysql/init_slave.sql:/docker-entrypoint-initdb.d/init_slave.sql"
+      - ./db/slave3:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+      --server-id=4
+      --gtid-mode=ON
+      --enforce-gtid-consistency=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3312:3306"
+    links:
+      - master_db
+    depends_on:
+      - master_db
+    networks:
+      mir:
+        aliases:
+          - slave_db3
+
+  slave_db3_admin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mir_slave_db3_admin
+    ports:
+      - "8003:80"
+    environment:
+      PMA_HOST: slave_db3
+    links:
+      - slave_db3
+    depends_on:
+      - slave_db3
+    networks:
+      - mir

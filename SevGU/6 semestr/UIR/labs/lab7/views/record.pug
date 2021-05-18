@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  if msg
+    p= msg
+  if rows.length
+    table
+      tr
+        th= 'id'
+        th= 'title'
+        th= 'posts_count'
+        for rec in rows
+          tr
+            td= rec.id
+            td= rec.title
+            td= rec.posts_count
