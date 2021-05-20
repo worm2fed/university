@@ -17,11 +17,11 @@ const conn = {
   password: "mir",
 };
 
-var test_id = 1000;
+var test_id = 1500;
 var queries = [
   {
     table: "blogs",
-    sql: `SELECT SQL_NO_CACHE * FROM blogs LIMIT 1`,
+    sql: `SELECT SQL_NO_CACHE * FROM blogs`,
   },
   {
     table: "blogs",
@@ -29,7 +29,7 @@ var queries = [
   },
   {
     table: "partitioned_blogs",
-    sql: `SELECT SQL_NO_CACHE * FROM partitioned_blogs LIMIT 1`,
+    sql: `SELECT SQL_NO_CACHE * FROM partitioned_blogs`,
   },
   {
     table: "partitioned_blogs",
