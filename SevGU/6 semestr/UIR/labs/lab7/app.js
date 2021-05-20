@@ -44,26 +44,6 @@ const conn = [
   }
 ];
 
-var test_id = 1000;
-var queries = [
-  {
-    table: "blogs",
-    sql: `SELECT SQL_NO_CACHE * FROM blogs LIMIT 1`,
-  },
-  {
-    table: "blogs",
-    sql: `SELECT SQL_NO_CACHE * FROM blogs WHERE id = ${test_id} LIMIT 1`,
-  },
-  {
-    table: "partitioned_blogs",
-    sql: `SELECT SQL_NO_CACHE * FROM partitioned_blogs LIMIT 1`,
-  },
-  {
-    table: "partitioned_blogs",
-    sql: `SELECT SQL_NO_CACHE * FROM partitioned_blogs WHERE id = ${test_id} LIMIT 1`,
-  },
-];
-
 app.get("/", runAsyncWrapper(async (req, res) => {
   var db = [];
   for (let i = 0; i < conn.length; i++) {
