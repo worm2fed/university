@@ -1,0 +1,316 @@
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap";
+
+$white: #fff;
+$green: #8db596;
+$green: #8db596;
+$brown: #92817a;
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	font-family: 'Manrope', sans-serif;
+	font-weight: 300;
+	font-size: 1.2rem;
+	color: $black;
+	background-color: $white;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+header {
+	display: block;
+	position: fixed;
+	width: 100%;
+	background-color: $white;
+}
+
+footer {
+	display: block;
+	position: fixed;
+	width: 100%;
+	background-color: $white;
+	flex-shrink: 0;
+	height: 60px;
+	text-align: center;
+	bottom: 0;
+	font-size: 1rem;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+article {
+	width: 60%;
+	text-align: justify;
+}
+
+h1 {
+	color: $brown;
+
+  &:before {
+		content: "{\00a0";
+	}
+
+  &:after {
+		content: "\00a0}";
+	}
+}
+
+h2 {
+	&:before {
+		content: "> \00a0";
+	}
+}
+
+a {
+	color: $black;
+	font-size: 1.1rem;
+	font-weight: 400;
+	text-decoration: none;
+
+  &:hover {
+		color: $green;
+	}
+}
+a.active {
+  color: $green;
+}
+
+fieldset {
+	margin: 1rem;
+	border: 1px solid $brown;
+	border-radius: 0.1rem;
+}
+
+button {
+	color: $black;
+	font-size: 1.1rem;
+	font-weight: 400;
+	padding: 0.5rem 1rem;
+	background-color: $white;
+	border: 1px solid $brown;
+
+  &:hover {
+		color: $white;
+		background-color: $green;
+		transition: color 0.3s, background-color 0.3s;
+	}
+}
+
+@mixin base-inputs-props() {
+  color: $black;
+	font-size: 1.1rem;
+	font-weight: 400;
+	padding: 0.5rem 1rem;
+	background-color: $white;
+	border: none;
+  border-color: $brown;
+	border-bottom: 1px solid;
+}
+
+input {
+  @include base-inputs-props();
+
+  &:focus {
+		border-color: $green;
+		outline: none;
+	}
+}
+
+textarea {
+  @include base-inputs-props();
+	height: 25px;
+	width: 300px;
+	resize: vertical;
+	font-family: 'Manrope', sans-serif;
+
+  &:focus {
+		border-color: $green;
+		outline: none;
+	}
+}
+
+select {
+  @include base-inputs-props();
+	width: 335px;
+
+  &:focus {
+		border-color: $green;
+		outline: none;
+	}
+}
+
+input[type="text"] {
+	width: 300px;
+}
+
+input[type="email"] {
+	width: 300px;
+}
+
+input[type='radio'] {
+	&:after {
+		width: 15px;
+		height: 15px;
+		border-radius: 15px;
+		position: relative;
+		background-color: $white;
+		content: '';
+		display: inline-block;
+		border: 1px solid $brown;
+	}
+
+  &:checked {
+		&:after {
+			width: 15px;
+			height: 15px;
+			border-radius: 15px;
+			position: relative;
+			background-color: $green;
+			content: '';
+			display: inline-block;
+			border: 1px solid $brown;
+		}
+	}
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+
+  li {
+		border-bottom: 1px solid $white;
+
+    a {
+			display: inline-flex;
+			padding: .5rem 1rem;
+		}
+	}
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	max-width: 960px;
+	margin: auto;
+	padding: 5rem .75rem 5rem .75rem;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #bedbbb;
+}
+
+.border-top {
+	border-top: 1px solid #bedbbb;
+}
+
+.with-accent {
+	color: $brown;
+}
+
+.no-margin {
+	margin: 0rem;
+}
+
+.intro {
+	margin-top: 1rem;
+	border-spacing: 0;
+
+	td {
+		padding: 1rem;
+	}
+}
+
+.hero {
+	background-color: $black;
+	color: $white;
+	vertical-align: top;
+}
+
+.disciplines {
+	border-collapse: collapse;
+	text-align: center;
+	border: 1px solid $black;
+
+  th {
+		text-align: center;
+		border: 1px solid $black;
+	}
+
+  td {
+		text-align: center;
+		border: 1px solid $black;
+
+    &:first-child {
+			width: 35px;
+		}
+		&:nth-last-child(-n+12) {
+			width: 35px;
+		}
+	}
+
+  .title {
+		padding-left: .5rem;
+		padding-right: .5rem;
+		text-align: left;
+		font-style: italic;
+	}
+}
+
+.extra-link {
+	float: right;
+	font-style: normal;
+
+  &:before {
+		content: '[ ';
+	}
+	&:after {
+		content: ' ]';
+	}
+}
+
+.photo {
+	position: relative;
+	display: inline-block;
+
+  &:hover {
+		&:after {
+			content: attr(data-name);
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: $black;
+			color: $white;
+			text-align: center;
+			font-size: 14px;
+			padding: 3px 0;
+			width: 100%;
+		}
+	}
+}
+
+.contact {
+	width: 60%;
+
+  .sex {
+		padding-top: 2rem;
+
+    label {
+			padding-left: 1rem;
+		}
+	}
+}
+
+.test {
+	width: 60%;
+}

@@ -1,0 +1,89 @@
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title Тест: "Основы дискретной математики". Персональный сайт Демиденко Андрея
+    %meta{:content => "Тест: Основы дискретной математики. Персональный сайт Демиденко Андрея", :name => "description"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet"}/
+  %body
+    %header.border-bottom
+      %nav
+        %ul.nav
+          %li
+            %a{:href => "./index.html"} Главная
+          %li
+            %a{:href => "./about.html"} Обо мне
+          %li
+            %a{:href => "./interests.html"} Мои интересы
+          %li
+            %a{:href => "./study.html"} Учёба
+          %li
+            %a{:href => "./photo.html"} Фотоальбом
+          %li
+            %a{:href => "./contact.html"} Контакт
+    %main.content
+      %h1 Тест: "Основы дискретной математики"
+      %form.test{:action => "mailto:worm2fed@mail.ru", :enctype => "text/plain", :method => "get"}
+        %fieldset
+          %legend ФИО
+          %input{:name => "name", :type => "text"}/
+        %fieldset
+          %legend Группа
+          %select{:name => "group"}
+            %option{:disabled => "disabled", :hidden => "", :label => "выбрать", :selected => "selected", :value => ""}
+            %option{:value => "ИС/б-18-1-з"} ИС/б-18-1-з
+            %option{:value => "ИС/б-18-1-о"} ИС/б-18-1-о
+            %option{:value => "ИС/б-17-1-з"} ИС/б-17-1-з
+            %option{:value => "ИС/б-17-1-о"} ИС/б-17-1-о
+            %option{:value => "other"} Другая
+        %fieldset
+          %legend Выбери верные операции над множествами
+          = succeed "\u{410}" do
+            %input{:name => "ops", :type => "checkbox", :value => "А ∪ А = А"}/
+          %br/
+          = succeed "\u{410}" do
+            %input{:name => "ops", :type => "checkbox", :value => "А ∪ (В ⋂ А) = В"}/
+          %br/
+          = succeed "\u{410}" do
+            %input{:name => "ops", :type => "checkbox", :value => "А ⋂ А = А"}/
+        %fieldset
+          %legend Выбери верные утверждения (несколько)
+          %select{:multiple => "multiple", :name => "theory"}
+            %optgroup{:label => "Множество бывает"}
+              %option{:value => "set_empty"} пустым
+              %option{:value => "set_universum"} универсальным
+              %option{:value => "set_mirror"} зеркальным
+            %optgroup{:label => "Бывают операции над мн-вами"}
+              %option{:value => "set_op_union"} объединение
+              %option{:value => "set_op_dif"} разность
+              %option{:value => "set_op_round"} округление
+              %option{:value => "set_op_intersect"} пересечение
+            %optgroup{:label => "Для мн-в используют диаграммы"}
+              %option{:value => "set_diagram_gant"} Ганта
+              %option{:value => "set_diagram_eiler"} Эйлера-Венна
+            %optgroup{:label => "Бинарные отношения бывают"}
+              %option{:value => "rel_antitransivity"} антитранзитивности
+              %option{:value => "rel_antisymmetricity"} антисимметричости
+            %optgroup{:label => "Функции бывают"}
+              %option{:value => "func_surjective"} сюръективные
+              %option{:value => "func_injective"} инъективные
+              %option{:value => "func_bijective"} биективные
+            %optgroup{:label => "Конъюнкция - это"}
+              %option{:value => "conjunction_and"} И
+              %option{:value => "conjunction_or"} ИЛИ
+            %optgroup{:label => "Дизъюнкция - это"}
+              %option{:value => "disjunction_and"} И
+              %option{:value => "disjunction_or"} ИЛИ
+        %fieldset
+          %legend Сформулируйте закон де Моргана (любой)
+          %input{:name => "de-morgan", :type => "text"}/
+        %fieldset
+          %legend λ
+          %button{:type => "reset"} Очистить форму
+          %button{:type => "submit"} Отправить
+    %footer.border-top
+      %p
+        Сайт разработан под лицензией
+        %a{:href => "https://opensource.org/licenses/AGPL-3.0", :target => "_blank"} AGPL-3.0
+        @worm2fed

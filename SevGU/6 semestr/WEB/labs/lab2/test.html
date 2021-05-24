@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <title>Тест: "Основы дискретной математики". Персональный сайт Демиденко Андрея</title>
+
+  <meta name="description" content="Тест: Основы дискретной математики. Персональный сайт Демиденко Андрея">
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <script src="js/FormValidator.js"></script>
+  <script src="js/test.js"></script>
+</head>
+
+<body>
+  <header class="border-bottom">
+    <nav>
+      <ul class="nav">
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="./about.html">Обо мне</a></li>
+        <li><a href="./interests.html">Мои интересы</a></li>
+        <li><a href="./study.html">Учёба</a></li>
+        <li><a href="./photo.html">Фотоальбом</a></li>
+        <li><a href="./contact.html">Контакт</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Тест: "Основы дискретной математики"</h1>
+
+    <form method="get" action="mailto:worm2fed@mail.ru" enctype="text/plain" class="test">
+
+      <fieldset>
+        <legend>ФИО</legend>
+
+        <input type="text" name="name" id="name">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Группа</legend>
+
+        <select name="group" id="group">
+          <option value="" selected disabled hidden label="выбрать"></option>
+          <option value="ИС/б-18-1-з">ИС/б-18-1-з</option>
+          <option value="ИС/б-18-1-о">ИС/б-18-1-о</option>
+          <option value="ИС/б-17-1-з">ИС/б-17-1-з</option>
+          <option value="ИС/б-17-1-о">ИС/б-17-1-о</option>
+          <option value="other">Другая</option>
+        </select>
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Выбери верные операции над множествами</legend>
+
+        <input type="checkbox" name="ops" value="А ∪ А = А">А ∪ А = А
+        <br>
+        <input type="checkbox" name="ops" value="А ∪ (В ⋂ А) = В">А ∪ (В ⋂ А) = В
+        <br>
+        <input type="checkbox" name="ops" value="А ⋂ А = А">А ⋂ А = А
+        <br>
+        <input type="checkbox" name="ops" value="none" checked>Нет верных
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Выбери верные утверждения (несколько)</legend>
+
+        <select name="theory" multiple id="theory">
+          <optgroup label="Множество бывает">
+            <option value="set_empty">пустым</option>
+            <option value="set_universum">универсальным</option>
+            <option value="set_mirror">зеркальным</option>
+          </optgroup>
+
+          <optgroup label="Бывают операции над мн-вами">
+            <option value="set_op_union">объединение</option>
+            <option value="set_op_dif">разность</option>
+            <option value="set_op_round">округление</option>
+            <option value="set_op_intersect">пересечение</option>
+          </optgroup>
+
+          <optgroup label="Для мн-в используют диаграммы">
+            <option value="set_diagram_gant">Ганта</option>
+            <option value="set_diagram_eiler">Эйлера-Венна</option>
+          </optgroup>
+
+          <optgroup label="Бинарные отношения бывают">
+            <option value="rel_antitransivity">антитранзитивности</option>
+            <option value="rel_antisymmetricity">антисимметричости</option>
+          </optgroup>
+
+          <optgroup label="Функции бывают">
+            <option value="func_surjective">сюръективные</option>
+            <option value="func_injective">инъективные</option>
+            <option value="func_bijective">биективные</option>
+          </optgroup>
+
+          <optgroup label="Конъюнкция - это">
+            <option value="conjunction_and">И</option>
+            <option value="conjunction_or">ИЛИ</option>
+          </optgroup>
+
+          <optgroup label="Дизъюнкция - это">
+            <option value="disjunction_and">И</option>
+            <option value="disjunction_or">ИЛИ</option>
+          </optgroup>
+        </select>
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Сформулируйте закон де Моргана (любой)</legend>
+
+        <input type="text" name="de-morgan" id="de-morgan" class="noDigits">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>λ</legend>
+        <p id="errorMessage"></p>
+
+        <button type="reset">Очистить форму</button>
+        <button type="submit">Отправить</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="border-top">
+    <p>
+      Сайт разработан под лицензией
+      <a href="https://opensource.org/licenses/AGPL-3.0" target="_blank">AGPL-3.0</a> @worm2fed
+    </p>
+  </footer>
+</body>
+
+</html>

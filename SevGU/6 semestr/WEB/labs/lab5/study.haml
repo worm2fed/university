@@ -1,0 +1,218 @@
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title Учёба. Персональный сайт Демиденко Андрея
+    %meta{:content => "Учёба. Персональный сайт Демиденко Андрея", :name => "description"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet"}/
+  %body
+    %header.border-bottom
+      %nav
+        %ul.nav
+          %li
+            %a{:href => "./index.html"} Главная
+          %li
+            %a{:href => "./about.html"} Обо мне
+          %li
+            %a{:href => "./interests.html"} Мои интересы
+          %li
+            %a.active{:href => "./study.html"} Учёба
+          %li
+            %a{:href => "./photo.html"} Фотоальбом
+          %li
+            %a{:href => "./contact.html"} Контакт
+    %main.content
+      %h1 Учёба
+      %h2
+        Севастопольский государственный университет,
+        %br/
+        %strong.with-accent информационные системы
+      %table.disciplines
+        %thead
+          %tr
+            %th{:rowspan => "3"} №
+            %th{:rowspan => "3"} Дисциплина
+            %th{:colspan => "12"} Часов в неделю (лекций, лаб. раб., практ. раб.)
+          %tr
+            %th{:colspan => "6"} 1 курс
+            %th{:colspan => "6"} 2 курс
+          %tr
+            %th{:colspan => "3"} 1 сем
+            %th{:colspan => "3"} 2 сем
+            %th{:colspan => "3"} 3 сем
+            %th{:colspan => "3"} 4 сем
+        %tbody
+          %tr
+            %td 1
+            %td.title Экология
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td 1
+            %td 0
+            %td 1
+            %td
+            %td
+            %td
+          %tr
+            %td 2
+            %td.title Высшая математика
+            %td 3
+            %td 0
+            %td 3
+            %td 3
+            %td 0
+            %td 3
+            %td 2
+            %td 0
+            %td 2
+            %td
+            %td
+            %td
+          %tr
+            %td 3
+            %td.title Русский язык и культура речи
+            %td 1
+            %td 0
+            %td 2
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+          %tr
+            %td 4
+            %td.title
+              Основы дискретной математики
+              %span.extra-link
+                %a{:href => "./test.html"} пройти тест
+            %td 2
+            %td 0
+            %td 1
+            %td 3
+            %td 0
+            %td 2
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+          %tr
+            %td 5
+            %td.title Основы программирования и алгоритмические языки
+            %td 3
+            %td 2
+            %td 0
+            %td 3
+            %td 3
+            %td 0
+            %td 0
+            %td 0
+            %td 1
+            %td
+            %td
+            %td
+          %tr
+            %td 6
+            %td.title Основы экологии
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td 1
+            %td 0
+            %td 0
+            %td
+            %td
+            %td
+          %tr
+            %td 7
+            %td.title Теория вероятностей и математическая статистика
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td 3
+            %td 1
+            %td 0
+            %td
+            %td
+            %td
+          %tr
+            %td 8
+            %td.title Физика
+            %td 2
+            %td 2
+            %td 0
+            %td 2
+            %td 2
+            %td 0
+            %td 2
+            %td 1
+            %td 0
+            %td
+            %td
+            %td
+          %tr
+            %td 9
+            %td.title Основы электротехники и электроники
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td 2
+            %td 1
+            %td 1
+            %td
+            %td
+            %td
+          %tr
+            %td 10
+            %td.title Численные методы в информатике
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td 2
+            %td 2
+            %td 0
+            %td 0
+            %td 0
+            %td 1
+          %tr
+            %td 11
+            %td.title Методы исследования операций
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td
+            %td 1
+            %td 1
+            %td 0
+            %td 2
+            %td 1
+            %td 1
+    %footer.border-top
+      %p
+        Сайт разработан под лицензией
+        %a{:href => "https://opensource.org/licenses/AGPL-3.0", :target => "_blank"} AGPL-3.0
+        @worm2fed

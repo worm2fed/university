@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <title>Контакт. Персональный сайт Демиденко Андрея</title>
+
+  <meta name="description" content="Контакт. Персональный сайт Демиденко Андрея">
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <script src="js/FormValidator.js"></script>
+  <script src="js/contact.js"></script>
+</head>
+
+<body>
+  <header class="border-bottom">
+    <nav>
+      <ul class="nav">
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="./about.html">Обо мне</a></li>
+        <li><a href="./interests.html">Мои интересы</a></li>
+        <li><a href="./study.html">Учёба</a></li>
+        <li><a href="./photo.html">Фотоальбом</a></li>
+        <li><a href="./contact.html" class="active">Контакт</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Контакт</h1>
+
+    <form method="get" action="mailto:worm2fed@mail.ru" enctype="text/plain" class="contact">
+      <fieldset>
+        <legend>ФИО</legend>
+
+        <input type="text" name="name" id="name">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Немного демографии</legend>
+
+        <select name="age" id="age">
+          <option value="" selected disabled hidden>Возраст</option>
+          <option value="1">0 - 7</option>
+          <option value="2">8 - 14</option>
+          <option value="3">15 - 21</option>
+          <option value="4">22 - 28</option>
+          <option value="5">29+</option>
+        </select>
+        <img src="assets/wrong.png" class="error-icon hidden">
+
+        <div class="sex">
+          <label>Пол</label>
+
+          <label for="male">М</label>
+          <input type="radio" name="gender" value="male">
+
+          <label for="female">Ж</label>
+          <input type="radio" name="gender" value="female">
+
+          <label for="male">Не указывать</label>
+          <input type="radio" name="gender" value="incognito" checked>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>E-mail</legend>
+
+        <input type="email" name="email" id="email">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Телефон</legend>
+
+        <input type="text" name="phone" id="phone">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Сообщение</legend>
+
+        <textarea name="body" id="body"></textarea>
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>λ</legend>
+        <p id="errorMessage"></p>
+
+        <button type="reset">Очистить форму</button>
+        <button type="submit">Отправить</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="border-top">
+    <p>
+      Сайт разработан под лицензией
+      <a href="https://opensource.org/licenses/AGPL-3.0" target="_blank">AGPL-3.0</a> @worm2fed
+    </p>
+  </footer>
+</body>
+
+</html>

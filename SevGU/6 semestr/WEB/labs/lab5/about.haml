@@ -1,0 +1,46 @@
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title Обо мне. Персональный сайт Демиденко Андрея
+    %meta{:content => "Обо мне. Персональный сайт Демиденко Андрея", :name => "description"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet"}/
+  %body
+    %header.border-bottom
+      %nav
+        %ul.nav
+          %li
+            %a{:href => "./index.html"} Главная
+          %li
+            %a.active{:href => "./about.html"} Обо мне
+          %li
+            %a{:href => "./interests.html"} Мои интересы
+          %li
+            %a{:href => "./study.html"} Учёба
+          %li
+            %a{:href => "./photo.html"} Фотоальбом
+          %li
+            %a{:href => "./contact.html"} Контакт
+    %main.content
+      %h1 Обо мне
+      %article
+        %h3 Привет
+        %p Я люблю информационные технологии со школы. Для меня программирование - словно быть волшебником.
+        %p
+          Я активно изучаю
+          %a{:href => "https://www.haskell.org/"} haskell
+          уже больше года, мне очень нравится этот язык!
+          Код красив, лаконичен и
+          эффективен.
+        %p Я интересуюсь социологией и психологией. Я люблю читать, путешествовать и общаться с людьми.
+        %p
+          Я считаю, что работа-это не только способ заработать деньги на материальные блага. Работа должна приносить
+          удовлетворение, иначе она бессмысленна. Занимаясь любыми проектами, я стараюсь погрузиться в то, что делаю,
+          потому
+          что наше отношение определяет качество.
+    %footer.border-top
+      %p
+        Сайт разработан под лицензией
+        %a{:href => "https://opensource.org/licenses/AGPL-3.0", :target => "_blank"} AGPL-3.0
+        @worm2fed @worm2fed

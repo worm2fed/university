@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <title>История просмотра. Персональный сайт Демиденко Андрея</title>
+
+  <meta name="description" content="История просмотра. Персональный сайт Демиденко Андрея">
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/history.js"></script>
+</head>
+
+<body>
+  <header class="border-bottom">
+    <nav>
+      <ul class="nav">
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="./about.html">Обо мне</a></li>
+        <li class="dropdown">
+          <a href="#">Мои интересы</a>
+
+          <ul class="dropdown-content border-bottom">
+            <li><a href="./interests.html#hobby">Моё хобби</a></li>
+            <li><a href="./interests.html#books">Мои любимые книги</a></li>
+            <li><a href="./interests.html#music">Моя любимая музыка</a></li>
+            <li><a href="./interests.html#films">Мои любимые фильмы</a></li>
+          </ul>
+        </li>
+        <li><a href="./study.html">Учёба</a></li>
+        <li><a href="./photo.html">Фотоальбом</a></li>
+        <li><a href="./contact.html">Контакт</a></li>
+        <li><a href="./history.html" class="active">История</a></li>
+      </ul>
+
+      <time class="clock"></time>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>История просмотра</h1>
+
+    <h3>История текущего сеанса</h3>
+    <table class="history">
+      <thead>
+        <th class="title">Страница</th>
+        <th>Количество посещений</th>
+      </thead>
+
+      <tbody id="sessionRecords"></tbody>
+    </table>
+
+    <h3>История за всё время</h3>
+    <table class="history">
+      <thead>
+        <th class="title">Страница</th>
+        <th>Количество посещений</th>
+      </thead>
+
+      <tbody id="allRecords"></tbody>
+    </table>
+  </main>
+
+  <footer class="border-top">
+    <p>
+      Сайт разработан под лицензией
+      <a href="https://opensource.org/licenses/AGPL-3.0" target="_blank">AGPL-3.0</a> @worm2fed
+    </p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <title>Мои интересы. Персональный сайт Демиденко Андрея</title>
+
+  <meta name="description" content="Интересы. Персональный сайт Демиденко Андрея">
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/interests.js"></script>
+  <script src="js/tracker.js"></script>
+</head>
+
+<body>
+  <header class="border-bottom">
+    <nav>
+      <ul class="nav">
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="./about.html">Обо мне</a></li>
+        <li class="dropdown">
+          <a href="#" class="active">Мои интересы</a>
+
+          <ul class="dropdown-content border-bottom">
+            <li><a href="./interests.html#hobby">Моё хобби</a></li>
+            <li><a href="./interests.html#books">Мои любимые книги</a></li>
+            <li><a href="./interests.html#music">Моя любимая музыка</a></li>
+            <li><a href="./interests.html#films">Мои любимые фильмы</a></li>
+          </ul>
+        </li>
+        <li><a href="./study.html">Учёба</a></li>
+        <li><a href="./photo.html">Фотоальбом</a></li>
+        <li><a href="./contact.html">Контакт</a></li>
+        <li><a href="./history.html">История</a></li>
+      </ul>
+
+      <time class="clock"></time>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Мои интересы</h1>
+
+    <div>
+      <ul class="nav">
+        <li>
+          <a href="#hobby">Моё хобби</a>
+        </li>
+        <li>
+          <a href="#books">Мои любимые книги</a>
+        </li>
+        <li>
+          <a href="#music">Моя любимая музыка</a>
+        </li>
+        <li>
+          <a href="#films">Мои любимые фильмы</a>
+        </li>
+      </ul>
+    </div>
+
+    <section id="hobby">
+      <h2>Моё хобби</h2>
+    </section>
+
+    <section id="books">
+      <h2>Мои любимые книги</h2>
+    </section>
+
+    <section id="music">
+      <h2>Моя любимая музыка</h2>
+
+      <p>Мой плейлист на <a href="https://soundcloud.com/worm2fed/likes">SoundCloud</a> всегда открыт!</p>
+    </section>
+
+    <section id="films">
+      <h2>Мои любимые фильмы</h2>
+
+      <p>С фильмами всё труднее, слишком много их пересмотрено. Из классики - Звёздные войны.</p>
+    </section>
+  </main>
+
+  <footer class="border-top">
+    <p>
+      Сайт разработан под лицензией
+      <a href="https://opensource.org/licenses/AGPL-3.0" target="_blank">AGPL-3.0</a> @worm2fed
+    </p>
+  </footer>
+</body>
+
+</html>

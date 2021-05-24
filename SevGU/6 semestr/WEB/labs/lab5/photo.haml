@@ -1,0 +1,108 @@
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title Фотоальбом. Персональный сайт Демиденко Андрея
+    %meta{:content => "Фотоальбом. Персональный сайт Демиденко Андрея", :name => "description"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet"}/
+  %body
+    %header.border-bottom
+      %nav
+        %ul.nav
+          %li
+            %a{:href => "./index.html"} Главная
+          %li
+            %a{:href => "./about.html"} Обо мне
+          %li
+            %a{:href => "./interests.html"} Мои интересы
+          %li
+            %a{:href => "./study.html"} Учёба
+          %li
+            %a.active{:href => "./photo.html"} Фотоальбом
+          %li
+            %a{:href => "./contact.html"} Контакт
+    %main.content
+      %h1 Фотоальбом
+      %span.with-accent ⟶
+      %table
+        %tr
+          %td
+            .photo{"data-name" => "Кактус цереус"}
+              %img{:alt => "Кактус цереус", :src => "https://rastenievod.com/wp-content/uploads/2016/12/3-47-325x170.jpg"}/
+              %span Кактус цереус
+          %td
+            .photo{"data-name" => "Ферокактус"}
+              %img{:alt => "Ферокактус", :src => "https://rastenievod.com/wp-content/uploads/2016/12/2-46-325x170.jpg"}/
+              %span Ферокактус
+          %td
+            .photo{"data-name" => "Рипсалидопсис"}
+              %img{:alt => "Рипсалидопсис", :src => "https://rastenievod.com/wp-content/uploads/2016/12/17-3-325x170.jpg"}/
+              %span Рипсалидопсис
+          %td
+            .photo{"data-name" => "Переския"}
+              %img{:alt => "Переския", :src => "https://rastenievod.com/wp-content/uploads/2016/12/1-45-325x170.jpg"}/
+              %span Переския
+          %td
+            .photo{"data-name" => "Астрофитум"}
+              %img{:alt => "Астрофитум", :src => "https://rastenievod.com/wp-content/uploads/2016/09/5-63-325x170.jpg"}/
+              %span Астрофитум
+          %td
+            .photo{"data-name" => "Эпифиллум"}
+              %img{:alt => "Эпифиллум", :src => "https://rastenievod.com/wp-content/uploads/2016/07/1-69-325x170.jpg"}/
+              %span Эпифиллум
+        %tr
+          %td
+            .photo{"data-name" => "Опунция"}
+              %img{:alt => "Опунция", :src => "https://rastenievod.com/wp-content/uploads/2016/05/1-95-325x170.jpg"}/
+              %span Опунция
+          %td
+            .photo{"data-name" => "Гилоцереус"}
+              %img{:alt => "Гилоцереус", :src => "https://rastenievod.com/wp-content/uploads/2019/09/1-1-325x170.jpg"}/
+              %span Гилоцереус
+          %td
+            .photo{"data-name" => "Ребуция"}
+              %img{:alt => "Ребуция", :src => "https://rastenievod.com/wp-content/uploads/2016/12/1-39-325x170.jpg"}/
+              %span Ребуция
+          %td
+            .photo{"data-name" => "Гимнокалициум"}
+              %img{:alt => "Гимнокалициум", :src => "https://rastenievod.com/wp-content/uploads/2016/12/1-38-325x170.jpg"}/
+              %span Гимнокалициум
+          %td
+            .photo{"data-name" => "Эхинокактус"}
+              %img{:alt => "Эхинокактус", :src => "https://rastenievod.com/wp-content/uploads/2016/12/1-37-325x170.jpg"}/
+              %span Эхинокактус
+          %td
+            .photo{"data-name" => "Эхинопсис"}
+              %img{:alt => "Эхинопсис", :src => "https://rastenievod.com/wp-content/uploads/2016/12/1-36-325x170.jpg"}/
+              %span Эхинопсис
+        %tr
+          %td
+            .photo{"data-name" => "Хатиора"}
+              %img{:alt => "Хатиора", :src => "https://rastenievod.com/wp-content/uploads/2016/12/1-35-325x170.jpg"}/
+              %span Хатиора
+          %td
+            .photo{"data-name" => "Рипсалис"}
+              %img{:alt => "Рипсалис", :src => "https://rastenievod.com/wp-content/uploads/2016/10/1-35-325x170.jpg"}/
+              %span Рипсалис
+          %td
+            .photo{"data-name" => "Маммиллярия"}
+              %img{:alt => "Маммиллярия", :src => "https://rastenievod.com/wp-content/uploads/2016/09/1-73-325x170.jpg"}/
+              %span Маммиллярия
+          %td
+            .photo{"data-name" => "Декабрист (Шлюмбергера)"}
+              %img{:alt => "Декабрист (Шлюмбергера)", :src => "https://rastenievod.com/wp-content/uploads/2016/09/1-54-325x170.jpg"}/
+              %span Декабрист (Шлюмбергера)
+          %td
+            .photo{"data-name" => "Стапелия"}
+              %img{:alt => "Стапелия", :src => "https://rastenievod.com/wp-content/uploads/2016/06/2-76-325x170.jpg"}/
+              %span Стапелия
+          %td
+      %span
+        \# фото взято с сайта
+        %a{:href => "https://rastenievod.com/category/komnatnye-rasteniya/kaktusy", :target => "_blank"} растениевод
+    %footer.border-top
+      %p
+        Сайт разработан под лицензией
+        %a{:href => "https://opensource.org/licenses/AGPL-3.0", :target => "_blank"} AGPL-3.0
+        @worm2fed

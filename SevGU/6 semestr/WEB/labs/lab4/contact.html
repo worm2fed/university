@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <title>Контакт. Персональный сайт Демиденко Андрея</title>
+
+  <meta name="description" content="Контакт. Персональный сайт Демиденко Андрея">
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/calendar.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/FormValidator.js"></script>
+  <script src="js/Calendar.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/tooltip.js"></script>
+</head>
+
+<body>
+  <header class="border-bottom">
+    <nav>
+      <ul class="nav">
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="./about.html">Обо мне</a></li>
+        <li class="dropdown">
+          <a href="#">Мои интересы</a>
+
+          <ul class="dropdown-content border-bottom">
+            <li><a href="./interests.html#hobby">Моё хобби</a></li>
+            <li><a href="./interests.html#books">Мои любимые книги</a></li>
+            <li><a href="./interests.html#music">Моя любимая музыка</a></li>
+            <li><a href="./interests.html#films">Мои любимые фильмы</a></li>
+          </ul>
+        </li>
+        <li><a href="./study.html">Учёба</a></li>
+        <li><a href="./photo.html">Фотоальбом</a></li>
+        <li><a href="./contact.html" class="active">Контакт</a></li>
+        <li><a href="./history.html">История</a></li>
+      </ul>
+
+      <time class="clock"></time>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Контакт</h1>
+
+    <form method="get" action="mailto:worm2fed@mail.ru" enctype="text/plain" class="contact">
+      <fieldset class="with-help" help="Формат: 3 слова, например Иванов Иван Иванович">
+        <legend>ФИО</legend>
+
+        <input type="text" name="name" id="name" class="main-input">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Немного демографии</legend>
+
+        <select name="age" id="age" class="main-select">
+          <option value="" selected disabled hidden>Возраст</option>
+          <option value="1">0 - 7</option>
+          <option value="2">8 - 14</option>
+          <option value="3">15 - 21</option>
+          <option value="4">22 - 28</option>
+          <option value="5">29+</option>
+        </select>
+        <img src="assets/wrong.png" class="error-icon hidden">
+
+        <div class="sex">
+          <label>Пол</label>
+
+          <label for="male">М</label>
+          <input type="radio" name="gender" value="male" class="main-input">
+
+          <label for="female">Ж</label>
+          <input type="radio" name="gender" value="female" class="main-input">
+
+          <label for="male">Не указывать</label>
+          <input type="radio" name="gender" value="incognito" checked class="main-input">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Дата рождения</legend>
+
+        <input type="text" name="birthday" id="birthday" class="main-input">
+        <div class="calendar" data-lang="en"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>E-mail</legend>
+
+        <input type="email" name="email" id="email" class="main-input">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset class="with-help" help="Формат: +3 или +7, затем от 9 до 11 цифр">
+        <legend>Телефон</legend>
+
+        <input type="text" name="phone" id="phone" class="main-input">
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>Сообщение</legend>
+
+        <textarea name="body" id="body" class="main-textarea"></textarea>
+        <img src="assets/wrong.png" class="error-icon hidden">
+      </fieldset>
+
+      <fieldset>
+        <legend>λ</legend>
+        <p id="errorMessage"></p>
+
+        <button type="reset" class="main-button">Очистить форму</button>
+        <button type="submit" class="main-button" disabled>Отправить</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="border-top">
+    <p>
+      Сайт разработан под лицензией
+      <a href="https://opensource.org/licenses/AGPL-3.0" target="_blank">AGPL-3.0</a> @worm2fed
+    </p>
+  </footer>
+</body>
+
+</html>

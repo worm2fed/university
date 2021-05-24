@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #707070;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header, footer {
+  display: block;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
+
+footer {
+  flex-shrink: 0;
+  height: 60px;
+  text-align: center;
+  bottom: 0;
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  width: 60%;
+  text-align: justify;
+}
+
+h1 {
+  color: #92817a;
+}
+h1:before {
+  content: "{\00a0";
+}
+h1:after {
+  content: "\00a0}";
+}
+
+h2:before {
+  content: "> \00a0";
+}
+
+a {
+  color: #707070;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+a:hover, a.active {
+  color: #8db596;
+}
+
+fieldset {
+  margin: 1rem;
+  border: 1px solid #92817a;
+  border-radius: 0.1rem;
+}
+
+
+.main-button,
+.main-input,
+.main-textarea,
+.main-select {
+  color: #707070;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border: 1px solid #92817a;
+}
+.main-button[disabled] {
+  color: #fff;
+  background-color: rgba(112, 112, 112, 0.5);
+}
+.main-button:not([disabled]):hover {
+  color: #fff;
+  background-color: #8db596;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.main-input,
+.main-textarea,
+.main-select {
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.main-input[type="text"],
+.main-input[type="email"] {
+  width: 300px;
+}
+.main-select {
+  width: 335px;
+}
+
+.main-input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  border: 1px solid #92817a;
+}
+.main-input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #8db596;
+  content: '';
+  display: inline-block;
+  border: 1px solid #92817a;
+}
+
+.main-input:focus,
+.main-select:focus,
+.main-textarea:focus {
+  border-color: #8db596;
+  outline: none;
+}
+
+.main-textarea {
+  height: 25px;
+  width: 300px;
+  resize: vertical;
+  font-family: 'Manrope', sans-serif;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+.nav li {
+  border-bottom: 1px solid #fff;
+}
+.nav li a {
+  display: inline-flex;
+  padding: .5rem 1rem;
+}
+
+.clock {
+  margin-top: 1.8rem;
+  color: #92817a;
+  font-size: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  margin-top: 1.25rem;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding-left: 0;
+}
+.dropdown-content li {
+  display: block;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  padding: 5rem .75rem 5rem .75rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #bedbbb !important;
+}
+.border-top {
+  border-top: 1px solid #bedbbb;
+}
+
+.with-accent {
+  color: #92817a;
+}
+
+.no-margin {
+  margin: 0rem;
+}
+
+.intro {
+  margin-top: 1rem;
+  border-spacing: 0;
+}
+.intro td {
+  padding: 1rem;
+}
+
+.hero {
+  background-color: #707070;
+  color: #fff;
+  vertical-align: top;
+}
+
+.disciplines,
+.history {
+  border-collapse: collapse;
+}
+.disciplines,
+.disciplines th,
+.disciplines td,
+.history,
+.history th,
+.history td {
+  text-align: center;
+  border: 1px solid #707070;
+}
+.disciplines .title,
+.history .title {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  text-align: left;
+}
+.disciplines .title {
+  font-style: italic;
+}
+.disciplines td:first-child,
+.disciplines td:nth-last-child(-n+12) {
+  width: 35px;
+}
+
+.extra-link {
+  float: right;
+  font-style: normal;
+}
+.extra-link:before {
+  content: '[ '
+}
+.extra-link:after {
+  content: ' ]'
+}
+
+.photo {
+  position: relative;
+  display: inline-block;
+}
+
+.photo:hover:after {
+  content: attr(data-name);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #707070;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 3px 0;
+  width: 100%;
+}
+
+.contact, .test {
+  width: 60%;
+}
+.contact .sex {
+  padding-top: 2rem;
+}
+.contact .sex label {
+  padding-left: 1rem;
+}
+
+.error-icon {
+  position: relative;
+  top: 0.35rem;
+  left: 2rem;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.input-error {
+  border-color: red;
+}
+.hidden {
+  display: none;
+}
+
+#errorMessage {
+  color: red;
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	background-color: #707070;
+	padding: 0.5rem;
+	color: #fff;
+  font-size: 14px;
+}

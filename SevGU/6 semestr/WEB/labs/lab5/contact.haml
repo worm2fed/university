@@ -1,0 +1,60 @@
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title Контакт. Персональный сайт Демиденко Андрея
+    %meta{:content => "Контакт. Персональный сайт Демиденко Андрея", :name => "description"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet"}/
+  %body
+    %header.border-bottom
+      %nav
+        %ul.nav
+          %li
+            %a{:href => "./index.html"} Главная
+          %li
+            %a{:href => "./about.html"} Обо мне
+          %li
+            %a{:href => "./interests.html"} Мои интересы
+          %li
+            %a{:href => "./study.html"} Учёба
+          %li
+            %a{:href => "./photo.html"} Фотоальбом
+          %li
+            %a.active{:href => "./contact.html"} Контакт
+    %main.content
+      %h1 Контакт
+      %form.contact{:action => "mailto:worm2fed@mail.ru", :enctype => "text/plain", :method => "get"}
+        %fieldset
+          %legend ФИО
+          %input{:name => "name", :type => "text"}/
+        %fieldset
+          %legend Немного демографии
+          %select{:name => "age"}
+            %option{:disabled => "disabled", :hidden => "", :selected => "selected", :value => ""} Возраст
+            %option{:value => "1"} 0 - 7
+            %option{:value => "2"} 8 - 14
+            %option{:value => "3"} 15 - 21
+            %option{:value => "4"} 22 - 28
+            %option{:value => "5"} 29+
+          .sex
+            %label Пол
+            %label{:for => "male"} М
+            %input#male{:name => "gender", :type => "radio", :value => "male"}/
+            %label{:for => "female"} Ж
+            %input#female{:name => "gender", :type => "radio", :value => "female"}/
+        %fieldset
+          %legend E-mail
+          %input{:name => "email", :type => "email"}/
+        %fieldset
+          %legend Сообщение
+          %textarea{:name => "body"}
+        %fieldset
+          %legend λ
+          %button{:type => "reset"} Очистить форму
+          %button{:type => "submit"} Отправить
+    %footer.border-top
+      %p
+        Сайт разработан под лицензией
+        %a{:href => "https://opensource.org/licenses/AGPL-3.0", :target => "_blank"} AGPL-3.0
+        @worm2fed

@@ -1,0 +1,42 @@
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title Главная. Персональный сайт Демиденко Андрея
+    %meta{:content => "Главная. Персональный сайт Демиденко Андрея", :name => "description"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet"}/
+  %body
+    %header.border-bottom
+      %nav
+        %ul.nav
+          %li
+            %a.active{:href => "./index.html"} Главная
+          %li
+            %a{:href => "./about.html"} Обо мне
+          %li
+            %a{:href => "./interests.html"} Мои интересы
+          %li
+            %a{:href => "./study.html"} Учёба
+          %li
+            %a{:href => "./photo.html"} Фотоальбом
+          %li
+            %a{:href => "./contact.html"} Контакт
+    %main.content
+      %h1 Главная
+      %table.intro
+        %tr
+          %td.hero
+            %h3 Лабораторная работа №5
+          %td
+            %h3.no-margin Демиденко Андрей Аркадьевич
+            %strong.with-accent группа ИС/б-18-1-з
+        %tr
+          %td.hero Исследование возможностей ускорения разработки веб-приложений с использованием HAML
+          %td.bottom
+            %img{:alt => "Демиденко Андрей Аркадьевич", :src => "assets/me.jpg", :width => "500"}/
+    %footer.border-top
+      %p
+        Сайт разработан под лицензией
+        %a{:href => "https://opensource.org/licenses/AGPL-3.0", :target => "_blank"} AGPL-3.0
+        @worm2fed

@@ -1,0 +1,62 @@
+!!! 5
+%html{:lang => "ru"}
+  %head
+    %title Мои интересы. Персональный сайт Демиденко Андрея
+    %meta{:content => "Интересы. Персональный сайт Демиденко Андрея", :name => "description"}/
+    %meta{:charset => "utf-8"}/
+    %link{:href => "assets/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet"}/
+  %body
+    %header.border-bottom
+      %nav
+        %ul.nav
+          %li
+            %a{:href => "./index.html"} Главная
+          %li
+            %a{:href => "./about.html"} Обо мне
+          %li
+            %a.active{:href => "./interests.html"} Мои интересы
+          %li
+            %a{:href => "./study.html"} Учёба
+          %li
+            %a{:href => "./photo.html"} Фотоальбом
+          %li
+            %a{:href => "./contact.html"} Контакт
+    %main.content
+      %h1 Мои интересы
+      %div
+        %ul.nav
+          %li
+            %a{:href => "#hobby"} Моё хобби
+          %li
+            %a{:href => "#books"} Мои любимые книги
+          %li
+            %a{:href => "#music"} Моя любимая музыка
+          %li
+            %a{:href => "#films"} Мои любимые фильмы
+      %section#hobby
+        %h2 Моё хобби
+        %ul
+          %li Психология
+          %li Растения
+          %li Чтение
+          %li Путешествия
+      %section#books
+        %h2 Мои любимые книги
+        %ul
+          %li Братья Стругацкие - практически всё
+          %li Alexander Granin - Functional Design And Architecture
+      %section#music
+        %h2 Моя любимая музыка
+        %p
+          Мой плейлист на
+          %a{:href => "https://soundcloud.com/worm2fed/likes"} SoundCloud
+          всегда открыт!
+      %section#films
+        %h2 Мои любимые фильмы
+        %p С фильмами всё труднее, слишком много их пересмотрено. Из классики - Звёздные войны.
+    %footer.border-top
+      %p
+        Сайт разработан под лицензией
+        %a{:href => "https://opensource.org/licenses/AGPL-3.0", :target => "_blank"} AGPL-3.0
+        @worm2fed
