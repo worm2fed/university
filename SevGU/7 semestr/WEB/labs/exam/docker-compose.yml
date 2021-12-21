@@ -1,0 +1,52 @@
+services:
+  app:
+    container_name: php-apache
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8000:80
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - exam
+
+  db:
+    container_name: db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./db.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    networks:
+      exam:
+        aliases:
+          - db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    links:
+      - db
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+    networks:
+      - exam
+
+networks:
+  exam:
+    driver: bridge

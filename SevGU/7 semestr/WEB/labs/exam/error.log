@@ -1,0 +1,22 @@
+
+ERRNO: 8 (E_NOTICE)
+TEXT: Undefined variable: params
+LOCATION: /var/www/html/models/PollModel.php, line 48, at December 18, 2021, 3:51 pm
+Showing backtrace: 
+models\PollModel.find(), line: 18, file: /var/www/html/controllers/PollController.php
+controllers\PollController.indexAction(), line: 0, file: unknown
+call_user_func_array(Array[2], Array[0]), line: 54, file: /var/www/html/core/Controller.php
+core\Controller.__call('indexAction', Array[0]), line: 99, file: /var/www/html/core/Router.php
+core\Router.dispatch(''), line: 32, file: /var/www/html/index.php
+
+
+ERRNO: 8 (E_NOTICE)
+TEXT: Undefined variable: params
+LOCATION: /var/www/html/models/PollModel.php, line 48, at December 18, 2021, 3:52 pm
+Showing backtrace: 
+models\PollModel.find(), line: 18, file: /var/www/html/controllers/PollController.php
+controllers\PollController.indexAction(), line: 0, file: unknown
+call_user_func_array(Array[2], Array[0]), line: 54, file: /var/www/html/core/Controller.php
+core\Controller.__call('indexAction', Array[0]), line: 99, file: /var/www/html/core/Router.php
+core\Router.dispatch(''), line: 32, file: /var/www/html/index.php
+

@@ -1,0 +1,52 @@
+services:
+  php-apache-environment:
+    container_name: php-apache
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./simple_mvc_framework:/var/www/html/
+    ports:
+      - 8000:80
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - mvc
+
+  db:
+    container_name: db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./simple_mvc_framework/db.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    networks:
+      mvc:
+        aliases:
+          - db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    links:
+      - db
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+    networks:
+      - mvc
+
+networks:
+  mvc:
+    driver: bridge

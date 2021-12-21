@@ -1,0 +1,13 @@
+Welcome to Learn You a Haskell for Great Good! If you are reading this, chances are you want to learn Haskell. Well, you have come to the right place.
+
+Haskell is a purely functional programming language. It means, that in Haskell there are no side effects: if a function is called twice with the same parameters, it is guaranteed to return the same result. 
+
+Haskell is lazy. It means, that unless specifically told otherwise, Haskell will not execute functions and calculate things until it is really forced to show you a result.
+
+Haskell is statically typed. It means, that at compilation time it is known where is numbers, strings, etc. This aspect provides more safety to our programs. 
+
+Finally, Haskell is elegant and concise. In Haskell, you spent less time coding and more time thinking.
+
+To start with Haskell, you need your favorite text editor and a compiler. We recommend using GHC, because it is the main compiler (when we say Haskell - more likely we mean GHC, because language and compiler closely linked). The best way nowadays is to use `ghcup` tooling.
+
+Good luck with your Haskell journey.
